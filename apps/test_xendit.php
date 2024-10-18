@@ -1,6 +1,4 @@
 <?php
-// API Key Xendit (Public Key yang valid dari akun Xendit demo Anda)
-$api_key = 'xnd_development_jDrpyTkT9GqO2d8UyGuXNC42AgG1pqFJHyN8krBKsJma67dV1wP1hC56VAOHon';
 
 // Endpoint API Xendit untuk membuat invoice
 $url = 'https://api.xendit.co/v2/invoices';
