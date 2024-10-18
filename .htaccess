@@ -1,0 +1,32 @@
+RewriteEngine On
+
+# Redirect index.php to root
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.php [NC]
+RewriteRule ^index\.php$ / [L,R=301]
+
+# Redirect login.php to /login
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/login\.php [NC]
+RewriteRule ^login\.php$ /login [L,R=301]
+
+# Redirect psb.php to /psb
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/psb\.php [NC]
+RewriteRule ^psb\.php$ /psb [L,R=301]
+
+# Redirect psb.php to /psb
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/logout\.php [NC]
+RewriteRule ^logout\.php$ /logout [L,R=301]
+
+
+# Redirect psb.php to /psb
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/register\.php [NC]
+RewriteRule ^register\.php$ /register [L,R=301]
+
+
+# Redirect psb.php to /psb
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/card\.php [NC]
+RewriteRule ^card\.php$ /card [L,R=301]
+
+
+# Serve PHP files without .php extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
